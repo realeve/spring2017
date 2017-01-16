@@ -1,11 +1,16 @@
 <template>
   <div class="main" :style="{'min-height':contentHeight+'px'}">
-    <h2 class="title">2017新春团拜会</h2>
+    <h2 class="title">2017新春团拜会中奖名单</h2>
     <div class="content">
-    {{luckier}}
+      <ul>
+        <li v-for="item in luckier">{{item}}</li>
+      </ul>
     </div>
     <div class="submit">
-      <button class="button" @click="lottery">开始抽奖</button>
+      <button class="button" @click="lottery">
+        <span v-if="status">开始</span>
+        <span v-else>停止</span>
+      </button>
     </div>
     <!-- <el-footer/> -->
   </div>
@@ -23,6 +28,9 @@
         },
         luckier(){
           return this.$store.state.luckier;
+        },
+        status(){
+          return this.$store.state.status;
         }
       },
       methods: {

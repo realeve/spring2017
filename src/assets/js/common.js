@@ -1,4 +1,4 @@
-const initList = (start, end) => {
+const randArr = (end, start = 0) => {
 	function randomsort(a, b) {
 		return Math.random() > 0.5 ? -1 : 1;
 	}
@@ -9,7 +9,7 @@ const initList = (start, end) => {
 			end = start;
 			start = 0;
 		}
-		for (var i = start; i <= end; i++) {
+		for (var i = start; i < end; i++) {
 			arr.push(i);
 		}
 		return arr.sort(randomsort);
@@ -18,5 +18,5 @@ const initList = (start, end) => {
 };
 
 export default {
-	initList
+	randArr
 };
