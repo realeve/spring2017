@@ -1,0 +1,52 @@
+@white: #fafafa;
+@text-color:@white;
+@yellow: #ffbc13;
+@dark-yellow:saturate(@yellow,-15%);
+
+.margin-top-20{
+  margin-top:20px;
+}
+
+.reset{
+  margin :0;
+  padding:0;
+}
+
+body{
+  .reset;
+  color:@text-color;
+  background-image: url('../assets/img/background.jpg');
+}
+
+.font-thin{
+  font-weight:100;
+}
+
+.font-center{
+  text-align:center;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+}
+
+.title{
+  .font-thin;
+  .font-center;
+  margin :0;
+  padding-top:30px;
+  font-size: 1.8em;
+}
+
+.main{
+  background-color: rgba(0,0,0,0.5);
+  height:100%;
+}
+
+.content{
+  .center;
+  align-items:center;
+  padding-top:200px;
+  padding-bottom: 120px;
+}
