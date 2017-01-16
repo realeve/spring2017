@@ -33,4 +33,6 @@ webpack(webpackConfig, function (err, stats) {
     chunks: false,
     chunkModules: false
   }) + '\n')
+  mkdir('-p', assetsPath+'\\css\\'+config.build.assetsSubDirectory)
+  mv(assetsPath+'/img', 'dist/static/css/'+config.build.assetsSubDirectory)
 })
